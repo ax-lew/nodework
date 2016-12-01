@@ -12,7 +12,8 @@ server.on("request", function(req,res){
 	fs.readdir("../public/", function(err, items) {
 		//console.log(items);
 		for (var i=0; i<items.length; i++) {
-			if(path == items[i]){
+			if(path == "/" + items[i]){
+				//console.log("Anda" + "\n");
 				res.write("Anda" + "\n");
 			}
 			
@@ -25,8 +26,7 @@ server.on("request", function(req,res){
 
 
 
-
-server.listen(process.env.PORT || 8080);
+server.listen(process.env.PORT || 3000);
 
 function getDateNow(){
 	var now = new Date();
