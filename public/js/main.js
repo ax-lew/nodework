@@ -18,7 +18,7 @@ window.onload = function() {
 
 var alto = "64px";
 var ancho = "64px";
-var abrirEnOtra = true;
+var abrirEnOtra = false;
 var manejador = new ManejadorArticulos("noticias");
 
 function bigImg(x) {
@@ -38,10 +38,28 @@ function leerNoticia(link){
 	if (abrirEnOtra){
 		window.open(link,"_self");
 	} else {
-
+		ocultar();
+		manejador.renderNoticia(link);
 	}
 
 }
+
+function ocultar(){
+	document.getElementById("pasarPagina").style.display = "none";
+	document.getElementById("volver").style.display = "block";
+}
+
+function mostrar(){
+	document.getElementById("pasarPagina").style.display = "block";
+	document.getElementById("volver").style.display = "none";
+}
+
+
+function volver(){
+	manejador.render();
+	mostrar();
+}
+
 
 function next(x){
 	if(manejador.desde + manejador.cantArtMax > manejador.articulos.length){
@@ -85,6 +103,19 @@ function ManejadorArticulos(dnd){
 		}
 		document.getElementById(this.where).innerHTML = aImprimir;
 		return;
+	}
+	this.renderNoticia = function(link){
+	
+		for (var i = 0; i < this.articulos.length; i++) {
+			if (this.articulos[i].link == link){
+				var aMostrar = this.articulos[i];
+				document.getElementById(this.where).innerHTML = aMostrar.render();
+				return;
+			}
+		}
+	
+
+	//document.getElementById(this.where).innerHTML = '<div> <link rel="import" href="noticias/river-huracan.html"> </div>';
 	}
 }
 
