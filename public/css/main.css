@@ -1,0 +1,53 @@
+body{
+	background-color: black;
+	color: white;
+}
+
+header{
+	background-color: black;
+	text-align: center;
+}
+
+header #logo{
+	border-style: solid;
+	border-color: white;
+}
+
+header #titulo{
+	border-style: solid;
+	border-color: white;
+	background-color: white;
+}
+
+.content{
+	background-color: red;
+}
+
+.links{
+	text-align: center;
+	color: white;
+}
+
+.title{
+	text-decoration: none;
+	font-size: 200%;
+	font-style: italic;
+}
+
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+
+
+.resumen{
+	background-color: white;
+	color: black;
+}
+
+footer{
+	background-color: lightblue;
+	color: black;
+}

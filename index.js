@@ -42,9 +42,9 @@ server.on("request", function(req,res){
 	var path = urlData.pathname;
 	
 	if (path != "/favicon.ico"){
-		fs.exists("../public" + path, function (exist) {
+		fs.exists("public" + path, function (exist) {
 			if (exist) {
-				leerArchivo("../public" + path,res);
+				leerArchivo("public" + path,res);
 			} else {
 				error404(res);
 			}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Noticias</title>
+	<link type="text/css" href="css/main.css" rel="stylesheet">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<header>
+		<div id="logo">
+			<img src="img/logo_mobile.png" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+		</div>
+		<div id="titulo">
+			Noticias de River
+		</div>
+	</header>
+
+	<div class="links">
+		<a href="index.html">
+			Home
+		</a>
+		<a href="noticias/noticia.html">
+			Noticias
+		</a>
+	</div>
+
+	<div class="content">
+		<a href="noticias/river-huracan.html">
+		<div class="title">
+			Resumen: River 1 - Huracan 0
+		</div>
+		</a>
+		<div class="resumen">
+			No se jugó bien, pero se pudo ganar. Eso es lo que importa. Ahora, a prepararse para la final del jueves.
+		</div>
+
+		<a href="noticias/noticia.html">
+		<div class="title">
+			Maidana afuera de la semifinal
+		</div>
+		</a>
+		<div class="resumen">
+			El central millonario no se pudo recuperar de su lesión y de esta manera, se pierde el encuentro contra Gimnasia.
+		</div>
+
+		<div id="noticias" >
+
+		</div>
+
+		
+		<button onclick="previous(this)">
+			Previous
+		</button>
+		
+
+		<button onclick="next(this)">
+			Next
+		</button>
+	</div>
+
+
+
+	<footer>
+		<p id="date"></p>
+		Hecho por Axel
+	</footer>
+</body>
+</html>
