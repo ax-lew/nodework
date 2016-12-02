@@ -64,10 +64,15 @@ function ManejadorArticulos(dnd){
 	this.desde = 0;
 	this.where = dnd
 	this.load = function(){
-		var artic = new Articulo('Titulo','Contenido sobre la noticia','noticias/noticia.html');
+		var artic = new Articulo('River ganó y llegó a su octava final con Gallardo','El Millonario fue claramente superior, marcó la diferencia antes de irse al descanso y, gracias a los goles de Driussi y Alario, se impuso 2-0 sobre Gimnasia y Esgrima La Plata para acceder por primera vez en su historia a la instancia decisiva de la Copa Argentina. Así no sólo puede obtener un trofeo inédito, sino también clasificarse a la Libertadores.','noticias/river-gimnasia.html');
 		var artic2 = new Articulo('D\'alessandro vuelve al once inicial?','Rodrigo Mora y el "cabezón" luchan por un puesto en el equipo, de cara al encuentro del jueves','noticias/noticia.html');
-		var artic3 = new Articulo('asdasdasd','asdasd','noticias/noticia.html');
-		var artic4 = new Articulo('klsdasdf','sdfsdg','noticias/noticia.html');
+		
+		var artic3 = new Articulo('Maidana afuera de la semifinal.','El central millonario no se pudo recuperar de su lesión y de esta manera, se pierde el encuentro contra Gimnasia.','noticias/maidana-semifinal.html');
+		var artic4 = new Articulo('Resumen: River 1 - Huracan 0.','No se jugó bien, pero se pudo ganar. Eso es lo que importa. Ahora, a prepararse para la final del jueves.','noticias/river-huracan.html');
+
+
+		//var artic3 = new Articulo('Titulo','Contenido sobre la noticia','noticias/noticia.html');
+		//var artic4 = new Articulo('klsdasdf','sdfsdg','noticias/noticia.html');
 		this.articulos.push(artic);
 		this.articulos.push(artic2);
 		this.articulos.push(artic3);
