@@ -7,7 +7,7 @@ server.listen(process.env.PORT || 3000);
 
 
 var cantVisitas = 0;
-var listaIPs =[];
+var listaIPs ={};
 
 function getDateNow(){
 	var now = new Date();
@@ -41,8 +41,15 @@ function contarCantVisitas(path){
 	}
 }
 
-function agregarIP(req){
-	listaIPs.push(req.connection.remoteAddress);
+function agregarIP(path,req){
+	if (path == "/index.html"){
+		if (listaIPs[req.connection.remoteAddress] == null){
+			listaIPs[req.connection.remoteAddress] = 1
+		} else {
+			listaIPs[req.connection.remoteAddress]++;
+		}
+	}
+	//listaIPs.push(req.connection.remoteAddress);
 	return;
 }
 
@@ -60,10 +67,8 @@ server.on("request", function(req,res){
 	if (path != "/favicon.ico" && path != "/"){
 		fs.exists("public" + path, function (exist) {
 			if (exist) {
-				//cantVisitas++;
 				contarCantVisitas(path);
-				agregarIP(req);
-				//console.log(path);
+				agregarIP(path,req);
 				leerArchivo("public" + path,res);
 			} else {
 				error404(res);
