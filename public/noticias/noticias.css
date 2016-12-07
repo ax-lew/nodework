@@ -1,13 +1,5 @@
-
-html{
-	background-image: url("../img/river3.png");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-
 body{
-	text-indent: 30px;
-	/*background-color: black;*/
+	background-color: black;
 	color: white;
 }
 
@@ -28,15 +20,10 @@ header #titulo{
 }
 
 .content{
-	margin: auto;
-	width: 800px;
 	background-color: red;
-	opacity: 0.75;
 }
 
-
 .links{
-	background-color: red;
 	text-align: center;
 	color: white;
 }
@@ -54,14 +41,24 @@ a {
 }
 
 
+.tituloNoticia{
+	text-align: center;
+	font-size: 46px;
+}
 
-.resumen{
-	background-color: white;
-	color: black;
+.resumenNoticia{
+	font-style: italic;
+	font-size: 24px;
+}
+
+.contenidoNoticia{
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color: white;
+	color: black;*/
+	line-height: 30px;
 }
 
 footer{
 	background-color: lightblue;
 	color: black;
-	display: none;
 }

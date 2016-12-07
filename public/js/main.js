@@ -18,7 +18,7 @@ window.onload = function() {
 
 var alto = "64px";
 var ancho = "64px";
-var abrirEnOtra = false;
+var abrirEnOtra = true;
 var manejador = new ManejadorArticulos("noticias");
 
 function bigImg(x) {
@@ -89,8 +89,6 @@ function ManejadorArticulos(dnd){
 		var artic4 = new Articulo('Resumen: River 1 - Huracan 0.','No se jugó bien, pero se pudo ganar. Eso es lo que importa. Ahora, a prepararse para la final del jueves.','noticias/river-huracan.html');
 
 
-		//var artic3 = new Articulo('Titulo','Contenido sobre la noticia','noticias/noticia.html');
-		//var artic4 = new Articulo('klsdasdf','sdfsdg','noticias/noticia.html');
 		this.articulos.push(artic);
 		this.articulos.push(artic2);
 		this.articulos.push(artic3);
@@ -113,9 +111,6 @@ function ManejadorArticulos(dnd){
 				return;
 			}
 		}
-	
-
-	//document.getElementById(this.where).innerHTML = '<div> <link rel="import" href="noticias/river-huracan.html"> </div>';
 	}
 }
 
@@ -127,8 +122,6 @@ function Articulo(titulo,contenido, link){
 	this.link = link;
 
 	this.render = function(){
-		//return '<a href=' + this.link + '> <div class="title" >' + this.titulo + '</div> </a> <div class="resumen">' + this.contenido + '</div>';
-		//return '<div> <div class="title" onclick="leerNoticia(\'noticias/river-huracan.html\')">' + this.titulo + '</div> <div class="resumen">' + this.contenido + '</div> </div>';
 		return '<div> <div class="title" onclick="leerNoticia(\'' + this.link + '\')">' + this.titulo + '</div> <div class="resumen">' + this.contenido + '</div> </div>';
 	}
 }
